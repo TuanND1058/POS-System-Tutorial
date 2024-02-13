@@ -30,8 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblRole = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnUserSettings = new System.Windows.Forms.Button();
             this.btnMngCategory = new System.Windows.Forms.Button();
@@ -41,7 +39,10 @@
             this.btnMngSales = new System.Windows.Forms.Button();
             this.btnMngBrand = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,27 +76,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 558);
             this.panel2.TabIndex = 1;
-            // 
-            // lblRole
-            // 
-            this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(72, 45);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(134, 20);
-            this.lblRole.TabIndex = 1;
-            this.lblRole.Text = "Adminstrator";
-            this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblName
-            // 
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(158)))), ((int)(((byte)(132)))));
-            this.lblName.Location = new System.Drawing.Point(72, 16);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(134, 29);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Username";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnLogout
             // 
@@ -241,6 +221,27 @@
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
             // 
+            // lblRole
+            // 
+            this.lblRole.ForeColor = System.Drawing.Color.White;
+            this.lblRole.Location = new System.Drawing.Point(72, 45);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(134, 20);
+            this.lblRole.TabIndex = 1;
+            this.lblRole.Text = "Adminstrator";
+            this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblName
+            // 
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(158)))), ((int)(((byte)(132)))));
+            this.lblName.Location = new System.Drawing.Point(72, 16);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(134, 29);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Username";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::POS.Properties.Resources.icons8_user_94;
@@ -251,12 +252,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(226, 46);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(960, 540);
+            this.panel3.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 598);
             this.ControlBox = false;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,6 +295,7 @@
         private System.Windows.Forms.Button btnMngSales;
         private System.Windows.Forms.Button btnMngBrand;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
