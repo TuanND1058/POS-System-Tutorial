@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         DBConnection dbConnection = new DBConnection();
 
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
             try
@@ -32,6 +32,15 @@ namespace POS
                 MessageBox.Show("Connected Failed");
             }
 
+        }
+
+        private void btnMngBrand_Click(object sender, EventArgs e)
+        {
+            frmBrandList frmBrandList = new frmBrandList();
+            frmBrandList.TopLevel = false;
+            panelMain.Controls.Add(frmBrandList);
+            frmBrandList.BringToFront();
+            frmBrandList.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace POS
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.panelSideLeft = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnUserSettings = new System.Windows.Forms.Button();
             this.btnMngCategory = new System.Windows.Forms.Button();
@@ -42,40 +42,40 @@
             this.lblRole = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelSideLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(158)))), ((int)(((byte)(132)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1198, 40);
-            this.panel1.TabIndex = 0;
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(158)))), ((int)(((byte)(132)))));
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1198, 40);
+            this.panelHeader.TabIndex = 0;
             // 
-            // panel2
+            // panelSideLeft
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Controls.Add(this.btnUserSettings);
-            this.panel2.Controls.Add(this.btnMngCategory);
-            this.panel2.Controls.Add(this.btnSysSettings);
-            this.panel2.Controls.Add(this.btnMngProduct);
-            this.panel2.Controls.Add(this.btnRecords);
-            this.panel2.Controls.Add(this.btnMngSales);
-            this.panel2.Controls.Add(this.btnMngBrand);
-            this.panel2.Controls.Add(this.btnDashboard);
-            this.panel2.Controls.Add(this.lblRole);
-            this.panel2.Controls.Add(this.lblName);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 558);
-            this.panel2.TabIndex = 1;
+            this.panelSideLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.panelSideLeft.Controls.Add(this.btnLogout);
+            this.panelSideLeft.Controls.Add(this.btnUserSettings);
+            this.panelSideLeft.Controls.Add(this.btnMngCategory);
+            this.panelSideLeft.Controls.Add(this.btnSysSettings);
+            this.panelSideLeft.Controls.Add(this.btnMngProduct);
+            this.panelSideLeft.Controls.Add(this.btnRecords);
+            this.panelSideLeft.Controls.Add(this.btnMngSales);
+            this.panelSideLeft.Controls.Add(this.btnMngBrand);
+            this.panelSideLeft.Controls.Add(this.btnDashboard);
+            this.panelSideLeft.Controls.Add(this.lblRole);
+            this.panelSideLeft.Controls.Add(this.lblName);
+            this.panelSideLeft.Controls.Add(this.pictureBox1);
+            this.panelSideLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideLeft.Location = new System.Drawing.Point(0, 40);
+            this.panelSideLeft.Name = "panelSideLeft";
+            this.panelSideLeft.Size = new System.Drawing.Size(220, 558);
+            this.panelSideLeft.TabIndex = 1;
             // 
             // btnLogout
             // 
@@ -204,6 +204,7 @@
             this.btnMngBrand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMngBrand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMngBrand.UseVisualStyleBackColor = true;
+            this.btnMngBrand.Click += new System.EventHandler(this.btnMngBrand_Click);
             // 
             // btnDashboard
             // 
@@ -252,12 +253,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel3
+            // panelMain
             // 
-            this.panel3.Location = new System.Drawing.Point(226, 46);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(960, 540);
-            this.panel3.TabIndex = 2;
+            this.panelMain.Location = new System.Drawing.Point(226, 46);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(960, 540);
+            this.panelMain.TabIndex = 2;
             // 
             // Form1
             // 
@@ -265,15 +266,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 598);
             this.ControlBox = false;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelSideLeft);
+            this.Controls.Add(this.panelHeader);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel2.ResumeLayout(false);
+            this.panelSideLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -281,8 +282,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Panel panelSideLeft;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnDashboard;
@@ -295,7 +296,7 @@
         private System.Windows.Forms.Button btnMngSales;
         private System.Windows.Forms.Button btnMngBrand;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelMain;
     }
 }
 
