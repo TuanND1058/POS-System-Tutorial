@@ -16,15 +16,16 @@ namespace POS
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         DBConnection dbConnection = new DBConnection();
+        frmBrandList _frmBrandList;
 
-        public frmBrand()
+        public frmBrand(frmBrandList frmBrandList)
         {
             InitializeComponent();
 
             try
             {
                 conn = new SqlConnection(dbConnection.MyConnection());
-
+                _frmBrandList = frmBrandList;
             }
             catch (Exception)
             {
@@ -60,6 +61,8 @@ namespace POS
 
                     MessageBox.Show("Record has been succesfully saved.");
                     Clear();
+
+                    _frmBrandList.LoadRecords();
                 }
             }
             catch (Exception ex)
