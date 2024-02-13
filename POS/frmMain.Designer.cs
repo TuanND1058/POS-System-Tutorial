@@ -152,7 +152,7 @@
             this.btnMngProduct.Name = "btnMngProduct";
             this.btnMngProduct.Size = new System.Drawing.Size(190, 38);
             this.btnMngProduct.TabIndex = 2;
-            this.btnMngProduct.Text = "Magnage Product";
+            this.btnMngProduct.Text = "Manage Product";
             this.btnMngProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMngProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMngProduct.UseVisualStyleBackColor = true;
@@ -260,7 +260,7 @@
             this.panelMain.Size = new System.Drawing.Size(960, 540);
             this.panelMain.TabIndex = 2;
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -272,7 +272,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelSideLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

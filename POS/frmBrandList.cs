@@ -21,5 +21,16 @@ namespace POS
                 dataGridView1.Rows.Add(i + 1, "1", "Brand " + i + 1);
             }
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmBrand frmBrand = new frmBrand();
+            frmBrand.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

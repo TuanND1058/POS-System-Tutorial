@@ -20,11 +20,11 @@ namespace POS
         public frmMain()
         {
             InitializeComponent();
+
             try
             {
                 conn = new SqlConnection(dbConnection.MyConnection());
                 conn.Open();
-                MessageBox.Show("Connected Success");
 
             }
             catch (Exception)
