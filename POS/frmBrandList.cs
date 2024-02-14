@@ -65,6 +65,18 @@ namespace POS
                 frmBrand.txtBrandName.Text = dataGridView1[2, e.RowIndex].Value.ToString();
                 frmBrand.ShowDialog();
             }
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this brand?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("DELETE FROM tblBrand WHERE id like '" + dataGridView1[1, e.RowIndex].Value.ToString() + "'", conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Brand has been successfuly deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadRecords();
+                }
+            }
         }
     }
 }
