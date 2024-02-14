@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class frmBrand : Form
+    public partial class FrmBrand : Form
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         DBConnection dbConnection = new DBConnection();
-        frmBrandList _frmBrandList;
+        FrmBrandList _frmBrandList;
 
-        public frmBrand(frmBrandList frmBrandList)
+        public FrmBrand(FrmBrandList frmBrandList)
         {
             InitializeComponent();
 
@@ -31,6 +31,21 @@ namespace POS
             {
 
             }
+        }
+
+        public void ShowSave()
+        {
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
+            txtBrandName.Clear();
+            txtBrandName.Focus();
+        }
+
+        public void ShowUpdate()
+        {
+            btnSave.Enabled = false;
+            btnUpdate.Enabled = true;
+            txtBrandName.Focus();
         }
 
         private void Clear()
@@ -73,12 +88,35 @@ namespace POS
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this brand?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("UPDATE tblBrand SET brand = @brand WHERE id like '" + lblID.Text + "'", conn);
+                    cmd.Parameters.AddWithValue("@brand", txtBrandName.Text);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Brand has been successfuly updated.");
+                    Clear();
+                    _frmBrandList.LoadRecords();
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

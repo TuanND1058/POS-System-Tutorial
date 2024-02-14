@@ -1,6 +1,6 @@
 ﻿namespace POS
 {
-    partial class frmBrand
+    partial class FrmBrand
     {
         /// <summary>
         /// Required designer variable.
@@ -115,6 +115,7 @@
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCancel
             // 
@@ -153,7 +154,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmBrand";
+            this.Name = "FrmBrand";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();

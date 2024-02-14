@@ -47,34 +47,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="frmBrand.cs">
+    <Compile Include="FrmBrand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBrand.Designer.cs">
-      <DependentUpon>frmBrand.cs</DependentUpon>
+    <Compile Include="FrmBrand.Designer.cs">
+      <DependentUpon>FrmBrand.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBrandList.cs">
+    <Compile Include="FrmBrandList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBrandList.Designer.cs">
-      <DependentUpon>frmBrandList.cs</DependentUpon>
+    <Compile Include="FrmBrandList.Designer.cs">
+      <DependentUpon>FrmBrandList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBrand.resx">
-      <DependentUpon>frmBrand.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBrand.resx">
+      <DependentUpon>FrmBrand.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBrandList.resx">
-      <DependentUpon>frmBrandList.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBrandList.resx">
+      <DependentUpon>FrmBrandList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

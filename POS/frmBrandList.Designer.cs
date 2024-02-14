@@ -1,6 +1,6 @@
 ﻿namespace POS
 {
-    partial class frmBrandList
+    partial class FrmBrandList
     {
         /// <summary>
         /// Required designer variable.
@@ -196,8 +196,8 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmBrandList";
-            this.Text = "frmBrandList";
+            this.Name = "FrmBrandList";
+            this.Text = "FrmBrandList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

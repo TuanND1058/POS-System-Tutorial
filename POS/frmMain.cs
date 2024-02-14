@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class frmMain : Form
+    public partial class FrmMain : Form
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         DBConnection dbConnection = new DBConnection();
 
-        public frmMain()
+        public FrmMain()
         {
             InitializeComponent();
 
@@ -36,7 +36,7 @@ namespace POS
 
         private void btnMngBrand_Click(object sender, EventArgs e)
         {
-            frmBrandList frmBrandList = new frmBrandList();
+            FrmBrandList frmBrandList = new FrmBrandList();
             frmBrandList.TopLevel = false;
             panelMain.Controls.Add(frmBrandList);
             frmBrandList.BringToFront();

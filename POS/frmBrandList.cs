@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class frmBrandList : Form
+    public partial class FrmBrandList : Form
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader = null;
         DBConnection dbConnection = new DBConnection();
 
-        public frmBrandList()
+        public FrmBrandList()
         {
             InitializeComponent();
             conn = new SqlConnection(dbConnection.MyConnection());
@@ -27,7 +27,8 @@ namespace POS
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmBrand frmBrand = new frmBrand(this);
+            FrmBrand frmBrand = new FrmBrand(this);
+            frmBrand.ShowSave();
             frmBrand.ShowDialog();
         }
 
@@ -50,7 +51,7 @@ namespace POS
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -58,7 +59,8 @@ namespace POS
             string colName = dataGridView1.Columns[e.ColumnIndex].Name;
             if (colName == "Edit")
             {
-                frmBrand frmBrand = new frmBrand(this);
+                FrmBrand frmBrand = new FrmBrand(this);
+                frmBrand.ShowUpdate();
                 frmBrand.lblID.Text = dataGridView1[1, e.RowIndex].Value.ToString();
                 frmBrand.txtBrandName.Text = dataGridView1[2, e.RowIndex].Value.ToString();
                 frmBrand.ShowDialog();
