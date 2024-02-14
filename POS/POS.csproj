@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnection.cs" />
-    <Compile Include="FrmBrand.cs">
+    <Compile Include="Category\FrmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBrand.Designer.cs">
+    <Compile Include="Category\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\FrmCategoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\FrmCategoryList.Designer.cs">
+      <DependentUpon>FrmCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Brand\FrmBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Brand\FrmBrand.Designer.cs">
       <DependentUpon>FrmBrand.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
@@ -59,21 +71,27 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBrandList.cs">
+    <Compile Include="Brand\FrmBrandList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBrandList.Designer.cs">
+    <Compile Include="Brand\FrmBrandList.Designer.cs">
       <DependentUpon>FrmBrandList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBrand.resx">
+    <EmbeddedResource Include="Brand\FrmBrand.resx">
       <DependentUpon>FrmBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\FrmCategoryList.resx">
+      <DependentUpon>FrmCategoryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBrandList.resx">
+    <EmbeddedResource Include="Brand\FrmBrandList.resx">
       <DependentUpon>FrmBrandList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

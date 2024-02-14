@@ -1,4 +1,4 @@
-﻿namespace POS
+﻿namespace POS.Brand
 {
     partial class FrmBrand
     {
@@ -80,15 +80,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 70);
+            this.label2.Location = new System.Drawing.Point(46, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Brand Name";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtBrandName
             // 
-            this.txtBrandName.Location = new System.Drawing.Point(129, 67);
+            this.txtBrandName.Location = new System.Drawing.Point(129, 65);
             this.txtBrandName.Name = "txtBrandName";
             this.txtBrandName.Size = new System.Drawing.Size(421, 25);
             this.txtBrandName.TabIndex = 3;
@@ -97,7 +98,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(129, 109);
+            this.btnSave.Location = new System.Drawing.Point(129, 107);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 35);
             this.btnSave.TabIndex = 4;
@@ -109,7 +110,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(210, 109);
+            this.btnUpdate.Location = new System.Drawing.Point(210, 107);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 35);
             this.btnUpdate.TabIndex = 5;
@@ -121,7 +122,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Silver;
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(291, 109);
+            this.btnCancel.Location = new System.Drawing.Point(291, 107);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 35);
             this.btnCancel.TabIndex = 6;
@@ -132,13 +133,13 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(420, 127);
+            this.lblID.Location = new System.Drawing.Point(420, 125);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(0, 17);
             this.lblID.TabIndex = 7;
             this.lblID.Visible = false;
             // 
-            // frmBrand
+            // FrmBrand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

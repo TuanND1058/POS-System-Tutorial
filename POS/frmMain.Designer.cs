@@ -124,6 +124,7 @@
             this.btnMngCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMngCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMngCategory.UseVisualStyleBackColor = true;
+            this.btnMngCategory.Click += new System.EventHandler(this.btnMngCategory_Click);
             // 
             // btnSysSettings
             // 
@@ -260,7 +261,7 @@
             this.panelMain.Size = new System.Drawing.Size(960, 540);
             this.panelMain.TabIndex = 2;
             // 
-            // frmMain
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

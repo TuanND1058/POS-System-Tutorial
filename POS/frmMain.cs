@@ -1,4 +1,6 @@
-﻿using System;
+﻿using POS.Brand;
+using POS.Category;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +43,15 @@ namespace POS
             panelMain.Controls.Add(frmBrandList);
             frmBrandList.BringToFront();
             frmBrandList.Show();
+        }
+
+        private void btnMngCategory_Click(object sender, EventArgs e)
+        {
+            FrmCategoryList frmCategoryList = new FrmCategoryList();
+            frmCategoryList.TopLevel = false;
+            panelMain.Controls.Add(frmCategoryList);
+            frmCategoryList.BringToFront();
+            frmCategoryList.Show();
         }
     }
 }
