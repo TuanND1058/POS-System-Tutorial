@@ -36,6 +36,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
@@ -127,12 +128,22 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(420, 127);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 17);
+            this.lblID.TabIndex = 7;
+            this.lblID.Visible = false;
+            // 
             // frmBrand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 186);
             this.ControlBox = false;
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
@@ -158,9 +169,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBrandName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.TextBox txtBrandName;
+        public System.Windows.Forms.Label lblID;
     }
 }

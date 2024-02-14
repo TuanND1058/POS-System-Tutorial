@@ -52,5 +52,17 @@ namespace POS
         {
             this.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dataGridView1.Columns[e.ColumnIndex].Name;
+            if (colName == "Edit")
+            {
+                frmBrand frmBrand = new frmBrand(this);
+                frmBrand.lblID.Text = dataGridView1[1, e.RowIndex].Value.ToString();
+                frmBrand.txtBrandName.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                frmBrand.ShowDialog();
+            }
+        }
     }
 }
