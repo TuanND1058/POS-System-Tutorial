@@ -26,6 +26,8 @@ namespace POS.Product
         {
             FrmProduct frmProduct = new FrmProduct();
             frmProduct.ShowSave();
+            frmProduct.LoadBrand();
+            frmProduct.LoadCategory();
             frmProduct.ShowDialog();
         }
     }

@@ -42,8 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbxBrand = new System.Windows.Forms.ComboBox();
-            this.cbxCategory = new System.Windows.Forms.ComboBox();
+            this.cboBrand = new System.Windows.Forms.ComboBox();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
@@ -190,21 +190,21 @@
             this.label6.Text = "Price";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cbxBrand
+            // cboBrand
             // 
-            this.cbxBrand.FormattingEnabled = true;
-            this.cbxBrand.Location = new System.Drawing.Point(128, 137);
-            this.cbxBrand.Name = "cbxBrand";
-            this.cbxBrand.Size = new System.Drawing.Size(422, 25);
-            this.cbxBrand.TabIndex = 3;
+            this.cboBrand.FormattingEnabled = true;
+            this.cboBrand.Location = new System.Drawing.Point(128, 137);
+            this.cboBrand.Name = "cboBrand";
+            this.cboBrand.Size = new System.Drawing.Size(422, 25);
+            this.cboBrand.TabIndex = 3;
             // 
-            // cbxCategory
+            // cboCategory
             // 
-            this.cbxCategory.FormattingEnabled = true;
-            this.cbxCategory.Location = new System.Drawing.Point(129, 173);
-            this.cbxCategory.Name = "cbxCategory";
-            this.cbxCategory.Size = new System.Drawing.Size(422, 25);
-            this.cbxCategory.TabIndex = 4;
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(129, 173);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(422, 25);
+            this.cboCategory.TabIndex = 4;
             // 
             // FrmProduct
             // 
@@ -212,8 +212,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 327);
             this.ControlBox = false;
-            this.Controls.Add(this.cbxCategory);
-            this.Controls.Add(this.cbxBrand);
+            this.Controls.Add(this.cboCategory);
+            this.Controls.Add(this.cboBrand);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -255,7 +255,7 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbxBrand;
-        private System.Windows.Forms.ComboBox cbxCategory;
+        private System.Windows.Forms.ComboBox cboBrand;
+        private System.Windows.Forms.ComboBox cboCategory;
     }
 }

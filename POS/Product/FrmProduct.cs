@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,14 @@ namespace POS.Product
 {
     public partial class FrmProduct : Form
     {
+        SqlConnection conn = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+        DBConnection dbConnection = new DBConnection();
+        SqlDataReader reader = null;
+
         public FrmProduct()
         {
+            conn = new SqlConnection(dbConnection.MyConnection());
             InitializeComponent();
         }
 
@@ -38,6 +45,34 @@ namespace POS.Product
             btnUpdate.Enabled = false;
             //txtCategoryName.Clear();
             //txtCategoryName.Focus();
+        }
+
+        public void LoadCategory()
+        {
+            cboCategory.Items.Clear();
+            conn.Open();
+            cmd = new SqlCommand("SELECT category FROM tblCategory", conn);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cboCategory.Items.Add(reader[0].ToString());
+            }
+            reader.Close();
+            conn.Close();
+        }
+
+        public void LoadBrand()
+        {
+            cboBrand.Items.Clear();
+            conn.Open();
+            cmd = new SqlCommand("SELECT brand FROM tblBrand", conn);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cboBrand.Items.Add(reader[0].ToString());
+            }
+            reader.Close();
+            conn.Close();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
