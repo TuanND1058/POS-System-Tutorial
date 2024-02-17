@@ -157,6 +157,7 @@
             this.btnMngProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMngProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMngProduct.UseVisualStyleBackColor = true;
+            this.btnMngProduct.Click += new System.EventHandler(this.btnMngProduct_Click);
             // 
             // btnRecords
             // 
