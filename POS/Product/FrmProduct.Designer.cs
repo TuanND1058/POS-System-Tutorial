@@ -106,6 +106,7 @@
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
             // 
@@ -244,10 +245,7 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.TextBox txtProductCode;
         public System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label3;
@@ -255,7 +253,10 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cboBrand;
-        private System.Windows.Forms.ComboBox cboCategory;
+        public System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.ComboBox cboBrand;
+        public System.Windows.Forms.ComboBox cboCategory;
     }
 }

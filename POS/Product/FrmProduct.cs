@@ -17,11 +17,13 @@ namespace POS.Product
         SqlCommand cmd = new SqlCommand();
         DBConnection dbConnection = new DBConnection();
         SqlDataReader reader = null;
+        FrmProductList frmProductList = null;
 
-        public FrmProduct()
+        public FrmProduct(FrmProductList frmProductList)
         {
             conn = new SqlConnection(dbConnection.MyConnection());
             InitializeComponent();
+            this.frmProductList = frmProductList;
         }
 
         public void ShowSave()
@@ -43,8 +45,13 @@ namespace POS.Product
         {
             btnSave.Enabled = true;
             btnUpdate.Enabled = false;
-            //txtCategoryName.Clear();
-            //txtCategoryName.Focus();
+
+            txtPrice.Clear();
+            txtDescription.Clear();
+            txtProductCode.Clear();
+            cboBrand.Text = string.Empty;
+            cboCategory.Text = string.Empty;
+            txtProductCode.Focus();
         }
 
         public void LoadCategory()
@@ -87,7 +94,109 @@ namespace POS.Product
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to save this product?", "Save Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string bid = string.Empty;
+                    string cid = string.Empty;
 
+                    conn.Open();
+                    cmd = new SqlCommand("SELECT id FROM tblBrand WHERE brand LIKE '" + cboBrand.Text + "'", conn);
+                    reader = cmd.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        bid = reader[0].ToString();
+                    }
+                    reader.Close();
+                    conn.Close();
+
+                    conn.Open();
+                    cmd = new SqlCommand("SELECT id FROM tblCategory WHERE category LIKE '" + cboCategory.Text + "'", conn);
+                    reader = cmd.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        cid = reader[0].ToString();
+                    }
+                    reader.Close();
+                    conn.Close();
+
+                    conn.Open();
+                    cmd = new SqlCommand("INSERT INTO tblProduct (pcode, pdesc, bid, cid, price) VALUES(@pcode, @pdesc, @bid, @cid, @price)", conn);
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@pcode", txtProductCode.Text);
+                    cmd.Parameters.AddWithValue("@pdesc", txtDescription.Text);
+                    cmd.Parameters.AddWithValue("@bid", bid);
+                    cmd.Parameters.AddWithValue("@cid", cid);
+                    cmd.Parameters.AddWithValue("@price", txtPrice.Text);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Product has been successfully saved.");
+                    Clear();
+                    frmProductList.LoadRecords();
+                }
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this product?", "Save Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string bid = string.Empty;
+                    string cid = string.Empty;
+
+                    conn.Open();
+                    cmd = new SqlCommand("SELECT id FROM tblBrand WHERE brand LIKE '" + cboBrand.Text + "'", conn);
+                    reader = cmd.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        bid = reader[0].ToString();
+                    }
+                    reader.Close();
+                    conn.Close();
+
+                    conn.Open();
+                    cmd = new SqlCommand("SELECT id FROM tblCategory WHERE category LIKE '" + cboCategory.Text + "'", conn);
+                    reader = cmd.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        cid = reader[0].ToString();
+                    }
+                    reader.Close();
+                    conn.Close();
+
+                    conn.Open();
+                    cmd = new SqlCommand("UPDATE tblProduct SET pdesc = @pdesc, bid = @bid, cid = @cid, price = @price WHERE pcode = @pcode", conn);
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@pcode", txtProductCode.Text);
+                    cmd.Parameters.AddWithValue("@pdesc", txtDescription.Text);
+                    cmd.Parameters.AddWithValue("@bid", bid);
+                    cmd.Parameters.AddWithValue("@cid", cid);
+                    cmd.Parameters.AddWithValue("@price", txtPrice.Text);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Product has been successfully updated.");
+                    Clear();
+                    frmProductList.LoadRecords();
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

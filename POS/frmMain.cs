@@ -61,6 +61,7 @@ namespace POS
             frmProductList.TopLevel = false;
             panelMain.Controls.Add(frmProductList);
             frmProductList.BringToFront();
+            frmProductList.LoadRecords();
             frmProductList.Show();
         }
     }
