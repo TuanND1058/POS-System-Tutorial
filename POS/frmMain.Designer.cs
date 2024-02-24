@@ -30,19 +30,20 @@
         {
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panelSideLeft = new System.Windows.Forms.Panel();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnUserSettings = new System.Windows.Forms.Button();
             this.btnMngCategory = new System.Windows.Forms.Button();
             this.btnSysSettings = new System.Windows.Forms.Button();
+            this.btnStockIn = new System.Windows.Forms.Button();
             this.btnMngProduct = new System.Windows.Forms.Button();
             this.btnRecords = new System.Windows.Forms.Button();
             this.btnMngSales = new System.Windows.Forms.Button();
             this.btnMngBrand = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.lblRole = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.panelSideLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             this.panelSideLeft.Controls.Add(this.btnUserSettings);
             this.panelSideLeft.Controls.Add(this.btnMngCategory);
             this.panelSideLeft.Controls.Add(this.btnSysSettings);
+            this.panelSideLeft.Controls.Add(this.btnStockIn);
             this.panelSideLeft.Controls.Add(this.btnMngProduct);
             this.panelSideLeft.Controls.Add(this.btnRecords);
             this.panelSideLeft.Controls.Add(this.btnMngSales);
@@ -76,153 +78,6 @@
             this.panelSideLeft.Name = "panelSideLeft";
             this.panelSideLeft.Size = new System.Drawing.Size(220, 558);
             this.panelSideLeft.TabIndex = 1;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::POS.Properties.Resources.icons8_logout_30;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(16, 508);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(190, 38);
-            this.btnLogout.TabIndex = 2;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // btnUserSettings
-            // 
-            this.btnUserSettings.FlatAppearance.BorderSize = 0;
-            this.btnUserSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserSettings.ForeColor = System.Drawing.Color.White;
-            this.btnUserSettings.Image = global::POS.Properties.Resources.icons8_user_30;
-            this.btnUserSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserSettings.Location = new System.Drawing.Point(16, 416);
-            this.btnUserSettings.Name = "btnUserSettings";
-            this.btnUserSettings.Size = new System.Drawing.Size(190, 38);
-            this.btnUserSettings.TabIndex = 2;
-            this.btnUserSettings.Text = "User Settings";
-            this.btnUserSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUserSettings.UseVisualStyleBackColor = true;
-            // 
-            // btnMngCategory
-            // 
-            this.btnMngCategory.FlatAppearance.BorderSize = 0;
-            this.btnMngCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMngCategory.ForeColor = System.Drawing.Color.White;
-            this.btnMngCategory.Image = global::POS.Properties.Resources.icons8_folder_30;
-            this.btnMngCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngCategory.Location = new System.Drawing.Point(16, 240);
-            this.btnMngCategory.Name = "btnMngCategory";
-            this.btnMngCategory.Size = new System.Drawing.Size(190, 38);
-            this.btnMngCategory.TabIndex = 2;
-            this.btnMngCategory.Text = "Manage Category";
-            this.btnMngCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMngCategory.UseVisualStyleBackColor = true;
-            this.btnMngCategory.Click += new System.EventHandler(this.btnMngCategory_Click);
-            // 
-            // btnSysSettings
-            // 
-            this.btnSysSettings.FlatAppearance.BorderSize = 0;
-            this.btnSysSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSysSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSysSettings.Image = global::POS.Properties.Resources.icons8_setting_30;
-            this.btnSysSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSysSettings.Location = new System.Drawing.Point(16, 372);
-            this.btnSysSettings.Name = "btnSysSettings";
-            this.btnSysSettings.Size = new System.Drawing.Size(190, 38);
-            this.btnSysSettings.TabIndex = 2;
-            this.btnSysSettings.Text = "System Settings";
-            this.btnSysSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSysSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSysSettings.UseVisualStyleBackColor = true;
-            // 
-            // btnMngProduct
-            // 
-            this.btnMngProduct.FlatAppearance.BorderSize = 0;
-            this.btnMngProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMngProduct.ForeColor = System.Drawing.Color.White;
-            this.btnMngProduct.Image = global::POS.Properties.Resources.icons8_strategy_30;
-            this.btnMngProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngProduct.Location = new System.Drawing.Point(16, 196);
-            this.btnMngProduct.Name = "btnMngProduct";
-            this.btnMngProduct.Size = new System.Drawing.Size(190, 38);
-            this.btnMngProduct.TabIndex = 2;
-            this.btnMngProduct.Text = "Manage Product";
-            this.btnMngProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMngProduct.UseVisualStyleBackColor = true;
-            this.btnMngProduct.Click += new System.EventHandler(this.btnMngProduct_Click);
-            // 
-            // btnRecords
-            // 
-            this.btnRecords.FlatAppearance.BorderSize = 0;
-            this.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecords.ForeColor = System.Drawing.Color.White;
-            this.btnRecords.Image = global::POS.Properties.Resources.icons8_database_view_30;
-            this.btnRecords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecords.Location = new System.Drawing.Point(16, 328);
-            this.btnRecords.Name = "btnRecords";
-            this.btnRecords.Size = new System.Drawing.Size(190, 38);
-            this.btnRecords.TabIndex = 2;
-            this.btnRecords.Text = "Records";
-            this.btnRecords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRecords.UseVisualStyleBackColor = true;
-            // 
-            // btnMngSales
-            // 
-            this.btnMngSales.FlatAppearance.BorderSize = 0;
-            this.btnMngSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMngSales.ForeColor = System.Drawing.Color.White;
-            this.btnMngSales.Image = global::POS.Properties.Resources.icons8_cart_30;
-            this.btnMngSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngSales.Location = new System.Drawing.Point(16, 152);
-            this.btnMngSales.Name = "btnMngSales";
-            this.btnMngSales.Size = new System.Drawing.Size(190, 38);
-            this.btnMngSales.TabIndex = 2;
-            this.btnMngSales.Text = "Manage sales";
-            this.btnMngSales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMngSales.UseVisualStyleBackColor = true;
-            // 
-            // btnMngBrand
-            // 
-            this.btnMngBrand.FlatAppearance.BorderSize = 0;
-            this.btnMngBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMngBrand.ForeColor = System.Drawing.Color.White;
-            this.btnMngBrand.Image = global::POS.Properties.Resources.icons8_brand_30;
-            this.btnMngBrand.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngBrand.Location = new System.Drawing.Point(16, 284);
-            this.btnMngBrand.Name = "btnMngBrand";
-            this.btnMngBrand.Size = new System.Drawing.Size(190, 38);
-            this.btnMngBrand.TabIndex = 2;
-            this.btnMngBrand.Text = "Manage Brand";
-            this.btnMngBrand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMngBrand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMngBrand.UseVisualStyleBackColor = true;
-            this.btnMngBrand.Click += new System.EventHandler(this.btnMngBrand_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Image = global::POS.Properties.Resources.icons8_dashboard_30;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(16, 108);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(190, 38);
-            this.btnDashboard.TabIndex = 2;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashboard.UseVisualStyleBackColor = true;
             // 
             // lblRole
             // 
@@ -245,6 +100,177 @@
             this.lblName.Text = "Username";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panelMain
+            // 
+            this.panelMain.Location = new System.Drawing.Point(226, 46);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(960, 540);
+            this.panelMain.TabIndex = 2;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::POS.Properties.Resources.icons8_logout_30;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(16, 514);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(190, 32);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            // 
+            // btnUserSettings
+            // 
+            this.btnUserSettings.FlatAppearance.BorderSize = 0;
+            this.btnUserSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserSettings.ForeColor = System.Drawing.Color.White;
+            this.btnUserSettings.Image = global::POS.Properties.Resources.icons8_user_30;
+            this.btnUserSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserSettings.Location = new System.Drawing.Point(16, 435);
+            this.btnUserSettings.Name = "btnUserSettings";
+            this.btnUserSettings.Size = new System.Drawing.Size(190, 32);
+            this.btnUserSettings.TabIndex = 2;
+            this.btnUserSettings.Text = "User Settings";
+            this.btnUserSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUserSettings.UseVisualStyleBackColor = true;
+            // 
+            // btnMngCategory
+            // 
+            this.btnMngCategory.FlatAppearance.BorderSize = 0;
+            this.btnMngCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMngCategory.ForeColor = System.Drawing.Color.White;
+            this.btnMngCategory.Image = global::POS.Properties.Resources.icons8_folder_30;
+            this.btnMngCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngCategory.Location = new System.Drawing.Point(16, 283);
+            this.btnMngCategory.Name = "btnMngCategory";
+            this.btnMngCategory.Size = new System.Drawing.Size(190, 32);
+            this.btnMngCategory.TabIndex = 2;
+            this.btnMngCategory.Text = "Manage Category";
+            this.btnMngCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMngCategory.UseVisualStyleBackColor = true;
+            this.btnMngCategory.Click += new System.EventHandler(this.btnMngCategory_Click);
+            // 
+            // btnSysSettings
+            // 
+            this.btnSysSettings.FlatAppearance.BorderSize = 0;
+            this.btnSysSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSysSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSysSettings.Image = global::POS.Properties.Resources.icons8_setting_30;
+            this.btnSysSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSysSettings.Location = new System.Drawing.Point(16, 397);
+            this.btnSysSettings.Name = "btnSysSettings";
+            this.btnSysSettings.Size = new System.Drawing.Size(190, 32);
+            this.btnSysSettings.TabIndex = 2;
+            this.btnSysSettings.Text = "System Settings";
+            this.btnSysSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSysSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSysSettings.UseVisualStyleBackColor = true;
+            // 
+            // btnStockIn
+            // 
+            this.btnStockIn.FlatAppearance.BorderSize = 0;
+            this.btnStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStockIn.ForeColor = System.Drawing.Color.White;
+            this.btnStockIn.Image = global::POS.Properties.Resources.icons8_stock_30;
+            this.btnStockIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStockIn.Location = new System.Drawing.Point(16, 245);
+            this.btnStockIn.Name = "btnStockIn";
+            this.btnStockIn.Size = new System.Drawing.Size(190, 32);
+            this.btnStockIn.TabIndex = 2;
+            this.btnStockIn.Text = "Stock In";
+            this.btnStockIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStockIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStockIn.UseVisualStyleBackColor = true;
+            this.btnStockIn.Click += new System.EventHandler(this.btnStockIn_Click);
+            // 
+            // btnMngProduct
+            // 
+            this.btnMngProduct.FlatAppearance.BorderSize = 0;
+            this.btnMngProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMngProduct.ForeColor = System.Drawing.Color.White;
+            this.btnMngProduct.Image = global::POS.Properties.Resources.icons8_strategy_30;
+            this.btnMngProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngProduct.Location = new System.Drawing.Point(16, 207);
+            this.btnMngProduct.Name = "btnMngProduct";
+            this.btnMngProduct.Size = new System.Drawing.Size(190, 32);
+            this.btnMngProduct.TabIndex = 2;
+            this.btnMngProduct.Text = "Manage Product";
+            this.btnMngProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMngProduct.UseVisualStyleBackColor = true;
+            this.btnMngProduct.Click += new System.EventHandler(this.btnMngProduct_Click);
+            // 
+            // btnRecords
+            // 
+            this.btnRecords.FlatAppearance.BorderSize = 0;
+            this.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecords.ForeColor = System.Drawing.Color.White;
+            this.btnRecords.Image = global::POS.Properties.Resources.icons8_database_view_30;
+            this.btnRecords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecords.Location = new System.Drawing.Point(16, 359);
+            this.btnRecords.Name = "btnRecords";
+            this.btnRecords.Size = new System.Drawing.Size(190, 32);
+            this.btnRecords.TabIndex = 2;
+            this.btnRecords.Text = "Records";
+            this.btnRecords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRecords.UseVisualStyleBackColor = true;
+            // 
+            // btnMngSales
+            // 
+            this.btnMngSales.FlatAppearance.BorderSize = 0;
+            this.btnMngSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMngSales.ForeColor = System.Drawing.Color.White;
+            this.btnMngSales.Image = global::POS.Properties.Resources.icons8_cart_30;
+            this.btnMngSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngSales.Location = new System.Drawing.Point(16, 169);
+            this.btnMngSales.Name = "btnMngSales";
+            this.btnMngSales.Size = new System.Drawing.Size(190, 32);
+            this.btnMngSales.TabIndex = 2;
+            this.btnMngSales.Text = "Manage sales";
+            this.btnMngSales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMngSales.UseVisualStyleBackColor = true;
+            // 
+            // btnMngBrand
+            // 
+            this.btnMngBrand.FlatAppearance.BorderSize = 0;
+            this.btnMngBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMngBrand.ForeColor = System.Drawing.Color.White;
+            this.btnMngBrand.Image = global::POS.Properties.Resources.icons8_brand_30;
+            this.btnMngBrand.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngBrand.Location = new System.Drawing.Point(16, 321);
+            this.btnMngBrand.Name = "btnMngBrand";
+            this.btnMngBrand.Size = new System.Drawing.Size(190, 32);
+            this.btnMngBrand.TabIndex = 2;
+            this.btnMngBrand.Text = "Manage Brand";
+            this.btnMngBrand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngBrand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMngBrand.UseVisualStyleBackColor = true;
+            this.btnMngBrand.Click += new System.EventHandler(this.btnMngBrand_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Image = global::POS.Properties.Resources.icons8_dashboard_30;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(16, 99);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(190, 32);
+            this.btnDashboard.TabIndex = 2;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::POS.Properties.Resources.icons8_user_94;
@@ -254,13 +280,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Location = new System.Drawing.Point(226, 46);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(960, 540);
-            this.panelMain.TabIndex = 2;
             // 
             // FrmMain
             // 
@@ -299,6 +318,7 @@
         private System.Windows.Forms.Button btnMngBrand;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button btnStockIn;
     }
 }
 

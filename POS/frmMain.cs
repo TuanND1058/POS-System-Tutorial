@@ -64,5 +64,12 @@ namespace POS
             frmProductList.LoadRecords();
             frmProductList.Show();
         }
+
+        private void btnStockIn_Click(object sender, EventArgs e)
+        {
+            FrmStockIn frmStockIn = new FrmStockIn();
+            frmStockIn.ShowDialog();
+
+        }
     }
 }
