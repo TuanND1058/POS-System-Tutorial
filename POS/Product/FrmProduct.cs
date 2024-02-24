@@ -198,5 +198,21 @@ namespace POS.Product
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 46)
+            {
+                // accept . character
+            }
+            else if (e.KeyChar == 8)
+            {
+                // accept backspace
+            }
+            else if (e.KeyChar < 48 || e.KeyChar > 57) // ascii code 48-57 between 0-9
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
