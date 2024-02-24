@@ -47,6 +47,7 @@ namespace POS.Product
             btnUpdate.Enabled = false;
 
             txtPrice.Clear();
+            txtBarcode.Clear();
             txtDescription.Clear();
             txtProductCode.Clear();
             cboBrand.Text = string.Empty;
@@ -124,9 +125,10 @@ namespace POS.Product
                     conn.Close();
 
                     conn.Open();
-                    cmd = new SqlCommand("INSERT INTO tblProduct (pcode, pdesc, bid, cid, price) VALUES(@pcode, @pdesc, @bid, @cid, @price)", conn);
+                    cmd = new SqlCommand("INSERT INTO tblProduct (pcode, barcode, pdesc, bid, cid, price) VALUES(@pcode, @barcode, @pdesc, @bid, @cid, @price)", conn);
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@pcode", txtProductCode.Text);
+                    cmd.Parameters.AddWithValue("@barcode", txtBarcode.Text);
                     cmd.Parameters.AddWithValue("@pdesc", txtDescription.Text);
                     cmd.Parameters.AddWithValue("@bid", bid);
                     cmd.Parameters.AddWithValue("@cid", cid);
@@ -177,9 +179,10 @@ namespace POS.Product
                     conn.Close();
 
                     conn.Open();
-                    cmd = new SqlCommand("UPDATE tblProduct SET pdesc = @pdesc, bid = @bid, cid = @cid, price = @price WHERE pcode = @pcode", conn);
+                    cmd = new SqlCommand("UPDATE tblProduct SET pdesc = @pdesc, barcode = @barcode, bid = @bid, cid = @cid, price = @price WHERE pcode = @pcode", conn);
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@pcode", txtProductCode.Text);
+                    cmd.Parameters.AddWithValue("@barcode", txtBarcode.Text);
                     cmd.Parameters.AddWithValue("@pdesc", txtDescription.Text);
                     cmd.Parameters.AddWithValue("@bid", bid);
                     cmd.Parameters.AddWithValue("@cid", cid);

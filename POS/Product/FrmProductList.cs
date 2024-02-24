@@ -44,12 +44,12 @@ namespace POS.Product
             int i = 0;
             dataGridView1.Rows.Clear();
             conn.Open();
-            cmd = new SqlCommand("SELECT p.pcode, p.pdesc, b.brand, c.category, p.price, p.qty FROM tblProduct p INNER JOIN tblBrand b ON b.id = p.bid INNER JOIN tblCategory c ON c.id = p.cid WHERE p.pdesc LIKE '%" + txtSearch.Text + "%'", conn);
+            cmd = new SqlCommand("SELECT p.pcode, p.barcode, p.pdesc, b.brand, c.category, p.price, p.qty FROM tblProduct p INNER JOIN tblBrand b ON b.id = p.bid INNER JOIN tblCategory c ON c.id = p.cid WHERE p.pdesc LIKE '%" + txtSearch.Text + "%'", conn);
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 i++;
-                dataGridView1.Rows.Add(i, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
+                dataGridView1.Rows.Add(i, reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString());
             }
             reader.Close();
             conn.Close();
@@ -68,10 +68,11 @@ namespace POS.Product
                 FrmProduct frmProduct = new FrmProduct(this);
                 frmProduct.ShowUpdate();
                 frmProduct.txtProductCode.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                frmProduct.txtDescription.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                frmProduct.cboBrand.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                frmProduct.cboCategory.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                frmProduct.txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                frmProduct.txtBarcode.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                frmProduct.txtDescription.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                frmProduct.cboBrand.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                frmProduct.cboCategory.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                frmProduct.txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 frmProduct.ShowDialog();
             }
             else if (colName == "Delete")
