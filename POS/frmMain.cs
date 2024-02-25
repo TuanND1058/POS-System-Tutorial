@@ -68,6 +68,8 @@ namespace POS
         private void btnStockIn_Click(object sender, EventArgs e)
         {
             FrmStockIn frmStockIn = new FrmStockIn();
+            frmStockIn.LoadProduct();
+            frmStockIn.LoadStockIn();
             frmStockIn.ShowDialog();
 
         }
