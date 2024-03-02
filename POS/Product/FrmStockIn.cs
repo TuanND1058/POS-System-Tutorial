@@ -50,6 +50,19 @@ namespace POS.Product
             string colName = dataGridView1.Columns[e.ColumnIndex].Name;
             if (colName == "colSelect")
             {
+                if (txtReferenceNo.Text == string.Empty)
+                {
+                    MessageBox.Show("Please enter reference no", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtReferenceNo.Focus();
+                    return;
+                }
+                if (txtStockInBy.Text == string.Empty)
+                {
+                    MessageBox.Show("Please enter stock in by", "POS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtStockInBy.Focus();
+                    return;
+                }
+
                 if (MessageBox.Show("Add this item?", "Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     conn.Open();
@@ -72,7 +85,7 @@ namespace POS.Product
             int i = 0;
             dataGridView2.Rows.Clear();
             conn.Open();
-            cmd = new SqlCommand("SELECT * FROM vwStockIn", conn);
+            cmd = new SqlCommand("SELECT * FROM vwStockIn WHERE refno LIKE '%" + txtReferenceNo.Text + "%'", conn);
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -84,6 +97,23 @@ namespace POS.Product
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dataGridView2.Columns[e.ColumnIndex].Name;
+            if (colName == "colDelete")
+            {
+                if (MessageBox.Show("Remove this item?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand(@"DELETE FROM tblStockIn WHERE id = '" + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Item has been successfully removed", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadStockIn();
+                }
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }
